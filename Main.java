@@ -27,8 +27,9 @@ public class Main {
 
         // Height of the tree
         System.out.println("Height of the BST: " + bst.height());
+
+        // Search for a value in the tree
+        int searchKey = 63;
+        System.out.println("Search for " + searchKey + ": " + (bst.search(searchKey) ? "Found" : "Not Found"));
     }
 }
-
-
-

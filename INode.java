@@ -1,3 +1,4 @@
+
 interface INode<T extends Comparable<T>> {
     T getKey();
 

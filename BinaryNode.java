@@ -1,3 +1,4 @@
+
 public class BinaryNode<T extends Comparable<T>> implements INode<T> {
     private T key;
     private INode<T> left;

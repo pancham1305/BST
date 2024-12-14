@@ -57,4 +57,18 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
         return 1 + Math.max(heightRec(root.getLeft()), heightRec(root.getRight()));
     }
+
+    public boolean search(T key) {
+        return searchRec(root, key);
+    }
+
+    private boolean searchRec(INode<T> root, T key) {
+        if (root == null) {
+            return false;
+        }
+        if (key.compareTo(root.getKey()) == 0) {
+            return true;
+        }
+        return key.compareTo(root.getKey()) < 0 ? searchRec(root.getLeft(), key) : searchRec(root.getRight(), key);
+    }
 }
